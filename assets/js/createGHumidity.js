@@ -1,5 +1,5 @@
 let chart;
-export const graphicateHumidity = (canvas, data) => {
+export const createGHumidity = (canvas, data) => {
   try {
     if(chart){
       chart.destroy()
@@ -25,7 +25,7 @@ export const graphicateHumidity = (canvas, data) => {
           x: {
             title: {
               display: true,
-              text: 'Tiempo',
+              text: 'Fecha',
             },
             ticks: {
               autoSkip: true,
