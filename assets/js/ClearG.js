@@ -1,14 +1,16 @@
 export const ClearG=(chartArray)=>{
     
-
     try {
+        console.log(chartArray.length)
         if(chartArray){
             chartArray.forEach(element => {
                 console.log(element.canvas);
-                element.destroy();  
+                element.destroy(); 
+                element.pop() 
                 console.log(element.canvas);
                  
             });
+            console.log(chartArray.length)
             chartArray.splice(0,chartArray.length);
             
             
