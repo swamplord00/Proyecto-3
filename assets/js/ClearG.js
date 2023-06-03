@@ -1,7 +1,7 @@
 export const ClearG=(chartArray)=>{
     
     try {
-        console.log(chartArray.length)
+        console.log(chartArray)
         if(chartArray){
             chartArray.forEach(element => {
                 console.log(element.canvas);
@@ -12,15 +12,16 @@ export const ClearG=(chartArray)=>{
             });
             console.log(chartArray.length)
             chartArray.splice(0,chartArray.length);
+            chartArray=[]
             
             
         }else{
             console.log("array vacio");
         }
     } catch (error) {
-        // console.log(error)
-        let alerta = new swal('No se elimino los graficos');
-        return alerta
+        console.log(error)
+        // let alerta = new swal('No se elimino los graficos');
+        // return alerta
 
     }
 
