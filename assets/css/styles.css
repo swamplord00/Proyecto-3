@@ -6,9 +6,133 @@ label {
     color: darkblue;
 }
 div.presentacion {
-
     width: 70vw;
-
     text-align: center;
+}
 
+h2{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+.resumen{
+    display: flex;
+    margin-bottom: 20px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3px;
+    padding-right: 30px;
+    
+}
+.info{
+    height: 20px;
+    width: 450px;
+    padding-right: 10px;
+}
+
+.pTempM{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pTempm{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pPrec{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pWind{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pSun{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pSet{
+        border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.pTempM:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #DA4040;
+}
+
+.pTempm:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #21CCD1;
+} 
+
+
+.pWind:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #85A5A2;
+} 
+
+.pPrec:hover{
+    background-color: lightblue;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pSun:hover{
+    background-color: #FAD6A5;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pSet:hover{
+    background-color: #E67451;
+    transform: scale(1.1);
+    cursor: pointer;
 }
