@@ -5,10 +5,14 @@ div.hidden {
 label {
     color: darkblue;
 }
+
 div.presentacion {
-
     width: 70vw;
-
     text-align: center;
-
 }
+ div.dailycard {
+    border: 2px double darkblue;
+    margin-bottom: 1em;
+    padding: 1em;
+    
+ }
