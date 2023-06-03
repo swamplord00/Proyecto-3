@@ -21,7 +21,6 @@ const handlerRequest = async () => {
   spinner.classList.remove('hidden');
   
   
-  
   const respuesta = await makeRequest(input);
   
   
@@ -30,7 +29,7 @@ const handlerRequest = async () => {
   console.log(hourly);
   
   // const temperaturaMaxima = daily.temperature_2m_max.replace('T', '');
-  await drawcanvas(hourly)
+  drawcanvas(hourly)
   
   const summaryDiv = document.getElementById('resultados');
   summaryDiv.innerHTML = `
@@ -47,22 +46,18 @@ const handlerRequest = async () => {
   <p>Temperatura minima: ${daily.apparent_temperature_min}</p>
   `;
   
-  
-    
+ 
   spinner.classList.add('hidden');
 };
 
 button.addEventListener('click', handlerRequest);
 
 
-const drawcanvas=async(hourly)=>{
+const drawcanvas=(hourly)=>{
   let canvaH, canvaP,canvaV,canvaT;
   console.log(canvaH, canvaP,canvaT,canvaV)
 
-  
-  
-  
-  
+
   if (checkH.checked) {
     
     canvaH = document.getElementById('graficoH');
