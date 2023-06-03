@@ -10,7 +10,12 @@ export const makeRequest = async (input) => {
       return datos;
     }
   } catch (error) {
-    throw new error();
+    Swal.fire({
+      icon: 'error',
+      title: '404',
+      text: 'Error de conexion con la base de datos',
+      
+    })
   }
 };
 
@@ -35,7 +40,7 @@ export const makeLatLonRequest = async (input) => {
   } catch (error) {
     Swal.fire({
       icon: 'error',
-      title: '404',
+      title: 'Ciudad incorecta',
       text: 'Nombre de ciudad no existe!',
       
     })

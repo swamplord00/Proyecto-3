@@ -16,7 +16,10 @@ export const ClearG=(chartArray)=>{
             console.log("array vacio");
         }
     } catch (error) {
-        console.log(error)
+        // console.log(error)
+        let alerta = new swal('No se elimino los graficos');
+        return alerta
+
     }
 
 
