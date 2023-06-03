@@ -40,6 +40,7 @@ export const createGHumidity = (canvas, data) => {
       },
     });
     return chart
+    
   } catch (error) {
       console.log(error)
       let alerta = new swal('No se encontro el clima');
