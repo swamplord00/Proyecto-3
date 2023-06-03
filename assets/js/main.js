@@ -17,10 +17,13 @@ const checkH=document.getElementById('checkHum');
 const checkP=document.getElementById('checkPrec');
 const checkW=document.getElementById('checkWind');
 const checkT=document.getElementById('checkTemp');
+const spinner = document.getElementById('spinner');
 
 let chartArray=[];
 
 const handlerRequest = async () => {
+  spinner.classList.remove('hidden');
+
   if(chartArray){
     ClearG(chartArray);
 
@@ -52,7 +55,7 @@ const handlerRequest = async () => {
 
   console.log(chartArray)
 
-
+  spinner.classList.add('hidden');
 };
 
 button.addEventListener('click', handlerRequest);
