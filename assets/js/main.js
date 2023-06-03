@@ -5,25 +5,54 @@ import { ClearG } from './ClearG.js';
 import { createGwind } from './createGraphWind.js';
 import { createGtemp } from './createGraphTemp.js';
 
+
+
 const input = document.getElementById('indicador');
 const button = document.getElementById('consultar');
+<<<<<<< HEAD
 const checkH = document.getElementById('checkHum');
 const checkP = document.getElementById('checkPrec');
 const checkW = document.getElementById('checkWind');
 const checkT = document.getElementById('checkTemp');
+=======
+const canvaT= document.getElementById('graficoT');
+const canvaH = document.getElementById('graficoH');
+const canvaP = document.getElementById('graficoP');
+const canvaV = document.getElementById('graficoV');
+const checkH=document.getElementById('checkHum');
+const checkP=document.getElementById('checkPrec');
+const checkW=document.getElementById('checkWind');
+const checkT=document.getElementById('checkTemp');
+>>>>>>> 902e8511f2f53fc33ce66f97b82b3a7d0d5cb283
 const spinner = document.getElementById('spinner');
 const contenedor=document.getElementById('contenedorGrafico')
 
+<<<<<<< HEAD
+=======
+let chartArray=[];
+>>>>>>> 902e8511f2f53fc33ce66f97b82b3a7d0d5cb283
 
 const handlerRequest = async () => {
  
   
   spinner.classList.remove('hidden');
+<<<<<<< HEAD
   
   
   const respuesta = await makeRequest(input);
   
   
+=======
+
+  if(chartArray){
+    ClearG(chartArray);
+
+  }
+  console.log(chartArray)
+
+  const respuesta = await makeRequest(input);
+  
+>>>>>>> 902e8511f2f53fc33ce66f97b82b3a7d0d5cb283
   const { daily, hourly } = respuesta;
   // console.log(daily);
   console.log(hourly);
@@ -33,6 +62,7 @@ const handlerRequest = async () => {
   
   const summaryDiv = document.getElementById('resultados');
   summaryDiv.innerHTML = `
+<<<<<<< HEAD
   <h2>Resumen del clima actual</h2>
   <p>Temperatura maxima: ${daily.temperature_2m_max}</p>
   <p>Temperatura minima: ${daily.temperature_2m_min}</p>
@@ -44,6 +74,22 @@ const handlerRequest = async () => {
   <p>Atardecer: ${daily.sunset}</p>
   <p>Temperatura maxima: ${daily.apparent_temperature_max}</p>
   <p>Temperatura minima: ${daily.apparent_temperature_min}</p>
+=======
+    <div class="resumen">
+    <h2 class="info">Resumen del clima actual</h2>
+    <p class="pTempM">Temp. maxima: ${daily.temperature_2m_max} °C</p>
+    <p class="pTempm">Temp. minima: ${daily.temperature_2m_min} °C</p>
+    <p class="pPrec">Precipitacion: ${daily.precipitation_sum} mm</p>
+    <p class="pWind">Velocidad del viento: ${daily.windspeed_10m_max} Km/h</p>
+    </div>
+    <div class="resumen">
+    <h2 class="info">Pronostico para mañana</h2>
+    <p class="pSun">Amanecer: ${daily.sunrise}</p>
+    <p class="pSet">Atardecer: ${daily.sunset}</p>
+    <p class="pTempM">Temp. maxima: ${daily.apparent_temperature_max}°C</p>
+    <p class="pTempm">Temp. minima: ${daily.apparent_temperature_min}°C</p>
+    </div>
+>>>>>>> 902e8511f2f53fc33ce66f97b82b3a7d0d5cb283
   `;
   
  
@@ -58,6 +104,7 @@ const drawcanvas=(hourly)=>{
   console.log(canvaH, canvaP,canvaT,canvaV)
 
 
+<<<<<<< HEAD
   if (checkH.checked) {
     
     canvaH = document.getElementById('graficoH');
@@ -134,3 +181,33 @@ checkW.addEventListener('change',function(e){
     document.getElementById('graficoV').remove()
   }
 })
+=======
+  if(checkH.checked){
+    chartArray.push(createGHumidity(canvaH,hourly));
+
+  }
+  if(checkP.checked){
+    chartArray.push(createGraphPrec(canvaP, hourly));
+
+  }
+  if(checkT.checked){
+    chartArray.push(createGtemp(canvaT,hourly));
+
+  }
+  if(checkW.checked){
+    chartArray.push(createGwind(canvaV,hourly));
+
+  }
+
+  console.log(chartArray)
+
+  spinner.classList.add('hidden');
+};
+
+button.addEventListener('click', handlerRequest);
+
+
+
+
+
+>>>>>>> 902e8511f2f53fc33ce66f97b82b3a7d0d5cb283
