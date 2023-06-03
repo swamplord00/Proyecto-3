@@ -1,3 +1,14 @@
 div.hidden {
     visibility: hidden;
 }
+
+label {
+    color: darkblue;
+}
+div.presentacion {
+
+    width: 70vw;
+
+    text-align: center;
+
+}
