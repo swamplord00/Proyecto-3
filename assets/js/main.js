@@ -35,6 +35,24 @@ const handlerRequest = async () => {
   const { daily, hourly } = respuesta;
   // console.log(daily);
   console.log(hourly);
+  
+  // const temperaturaMaxima = daily.temperature_2m_max.replace('T', '');
+
+
+  const summaryDiv = document.getElementById('resultados');
+  summaryDiv.innerHTML = `
+    <h2>Resumen del clima actual</h2>
+    <p>Temperatura maxima: ${daily.temperature_2m_max}</p>
+    <p>Temperatura minima: ${daily.temperature_2m_min}</p>
+    <p>Precipitacion: ${daily.precipitation_sum}</p>
+    <p>Velocidad del viento: ${daily.windspeed_10m_max}</p>
+
+    <h2>Pronostico para el día de mañana</h2>
+    <p>Amanecer: ${daily.sunrise}</p>
+    <p>Atardecer: ${daily.sunset}</p>
+    <p>Temperatura maxima: ${daily.apparent_temperature_max}</p>
+    <p>Temperatura minima: ${daily.apparent_temperature_min}</p>
+  `;
 
   if(checkH.checked){
     chartArray.push(createGHumidity(canvaH,hourly));
