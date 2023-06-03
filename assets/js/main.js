@@ -24,10 +24,10 @@ let chartArray=[];
 const handlerRequest = async () => {
   spinner.classList.remove('hidden');
 
-  if(chartArray){
-    ClearG(chartArray);
+ 
+  ClearG(chartArray);
 
-  }
+  
   console.log(chartArray)
 
   const respuesta = await makeRequest(input);

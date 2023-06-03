@@ -1,12 +1,10 @@
-let chart;
+
 export const createGHumidity = (canvas, data) => {
   try {
-    if(chart){
-      chart.destroy()
-    }
+    
     const hora = data.time.map((elemento) => elemento.split('T').join(' '));
 
-     chart = new Chart(canvas, {
+    const chart = new Chart(canvas, {
       type: 'line',
       data: {
         labels: hora,
@@ -41,7 +39,10 @@ export const createGHumidity = (canvas, data) => {
         },
       },
     });
+    return chart
   } catch (error) {
-    console.log(error)
+      console.log(error)
+      let alerta = new swal('No se encontro el clima');
+      return alerta
   }
 };
