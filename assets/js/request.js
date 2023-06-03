@@ -1,7 +1,7 @@
 export const makeRequest = async (input) => {
   const latLonData = await makeLatLonRequest(input);
   const { longitude, latitude } = latLonData;
-  const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max,winddirection_10m_dominant&timezone=auto`;
+  const endpoint = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max,winddirection_10m_dominant&timezone=auto&forecast_days=1&daily=apparent_temperature_max,apparent_temperature_min,sunrise,sunset&forecast_days=1`;
   const output = await axios.get(endpoint);
   try {
     
@@ -10,7 +10,12 @@ export const makeRequest = async (input) => {
       return datos;
     }
   } catch (error) {
-    throw new error();
+    Swal.fire({
+      icon: 'error',
+      title: '404',
+      text: 'Error de conexion con la base de datos',
+      
+    })
   }
 };
 
@@ -35,7 +40,7 @@ export const makeLatLonRequest = async (input) => {
   } catch (error) {
     Swal.fire({
       icon: 'error',
-      title: '404',
+      title: 'Ciudad incorecta',
       text: 'Nombre de ciudad no existe!',
       
     })
