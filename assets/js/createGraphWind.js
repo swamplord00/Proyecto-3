@@ -1,32 +1,14 @@
-// export const createGwind=(canvas,data)=>{
-    
-    
-//     const chart=new Chart(canvas,{
-//         type:'line',
-//         data:{
-//             labels: data.time,
-//             datasets:[{
-//                 label:"Velocidad del viento",
-//                 data: data.windspeed_10m,
-//                 fill:false,
-//                 borderColor: 'rgb(75, 192, 192)',
-//                 tension: 0.1,
-//                 backgroundColor:'green'
-//             }]
-//         },
-       
-//     })
-
-//     return chart
-// }
-
 
 export const createGwind = (canvas, data) => {
+  let chartV
+  
   try {
-    
+    if(chartV){
+      chartV.destroy()
+    }
     const hora = data.time.map((elemento) => elemento.split('T').join(' '));
 
-    const chart = new Chart(canvas, {
+    chartV = new Chart(canvas, {
       type: 'line',
       data: {
         labels: hora,
@@ -35,7 +17,7 @@ export const createGwind = (canvas, data) => {
             label: 'Velocidad del viento',
             data: data.windspeed_10m,
             fill: false,
-            borderColor: 'lightblue',
+            borderColor: '#85A5A2',
             tension: 0.1,
           },
         ],
@@ -61,10 +43,10 @@ export const createGwind = (canvas, data) => {
         },
       },
     });
-    return chart
+  
   } catch (error) {
         console.log(error)
-        let alerta = new swal('No se encontro el clima');
-        return alerta
+        // let alerta = new swal('No se encontro el clima');
+        // return alerta
   }
 };

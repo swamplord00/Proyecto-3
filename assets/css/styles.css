@@ -10,9 +10,199 @@ div.presentacion {
     width: 70vw;
     text-align: center;
 }
- div.dailycard {
-    border: 2px double darkblue;
-    margin-bottom: 1em;
-    padding: 1em;
-    
- }
+
+h2{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+.resumen{
+    display: flex;
+    margin-bottom: 20px;
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3px;
+    padding: 20px; 
+    flex-wrap: wrap;
+}
+
+div.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info{
+    height: 20px;
+    width: 450px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+.pTempM{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pTempm{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pPrec{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pWind{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pSun{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.pSet{
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.pTempM:hover{
+    border: solid 1px white;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+    background-color: #DA4040;
+}
+
+.pTempm:hover{
+    border: solid 1px white;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+    background-color: #21CCD1;
+} 
+
+
+.pWind:hover{
+    border: solid 1px white;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+    background-color: #85A5A2;
+} 
+
+.pPrec:hover{
+    border: solid 1px white;
+    color: white;
+    background-color: lightblue;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pSun:hover{
+    border: solid 1px white;
+    background-color: #FAD6A5;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pSet:hover{
+    border: solid 1px white;
+    background-color: #E67451;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.credits{
+    display: grid;
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3px;
+    padding-right:100px;     
+    height: 400px;
+    width: 1200px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.proyect{
+    text-align: center;
+}
+
+.proyectOne{
+    text-align: center;
+}
+
+.proyectTwo{
+    text-align: center;  
+    margin-left: 100px;
+}
+
+li{
+    text-align: center;
+    list-style: none;
+}
+
+li:hover{
+    color: #0275d8;
+}
+footer{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+footer p{
+    text-align: center;
+}

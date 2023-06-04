@@ -63,9 +63,7 @@
         class="border border-primary rounded border-2 shadow p-3 mb-5 bg-body-tertiary"
       >
         <div class="input-group flex-nowrap">
-          <label for="indicador" class="form-control"
-            >La ciudad que desea consultar es :</label
-          >
+          <label for="indicador" class="form-control">Ciudad :</label>
           <input
             type="text"
             class="form-control"
@@ -77,7 +75,7 @@
         </div>
         <!-- Opciones -->
         <div class="container-fluid pt-3">
-          <p>Seleccione los graficos de clima que quiere consultar</p>
+          <p>Graficos climatico</p>
           <div class="form-check">
             <input
               class="form-check-input"
@@ -138,15 +136,16 @@
       </div>
 
       <div id="resultados"></div>
-      
-      <div id="contenedorGrafico">
-        <canvas id="graficoP"></canvas>
-        <canvas id="graficoH"></canvas>
-        <canvas id="graficoT"></canvas>
-        <canvas id="graficoV"></canvas>
-      </div>
+
+      <div id="contenedorGrafico"></div>
     </main>
 
+    <footer>
+      <p>
+        Thanks to <a href="https://open-meteo.com/en/docs">Open-Meteo</a> for
+        the free API we use in this project
+      </p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

@@ -1,33 +1,13 @@
 
-// export let createGraphPrec;
-
-// createGraphPrec = (canvas, data) => {
-//   const chart = new Chart(canvas, {
-//     type: 'bar',
-//     data: {
-//       labels: data.time,
-//       datasets: [
-//         {
-//           label: 'Precipitation',
-//           data: data.precipitation,
-//           fill: false,
-//           borderColor: 'orange',
-//           tension: 0.1,
-//           backgroundColor:'orange'
-//         },
-//       ],
-//     },
-//   });
-//   return chart
-// };
-
-
 export const createGraphPrec = (canvas, data) => {
+  let chartP
   try {
-    
+    if(chartP){
+      chartP.destroy()
+    }
     const hora = data.time.map((elemento) => elemento.split('T').join(' '));
 
-    const chart = new Chart(canvas, {
+    chartP = new Chart(canvas, {
       type: 'line',
       data: {
         labels: hora,
@@ -36,7 +16,7 @@ export const createGraphPrec = (canvas, data) => {
             label: 'Precipitación',
             data: data.precipitation,
             fill: false,
-            borderColor: 'lightblue',
+            borderColor: 'green',
             tension: 0.1,
           },
         ],
@@ -62,12 +42,12 @@ export const createGraphPrec = (canvas, data) => {
         },
       },
     });
-    return chart
+    
 
   } catch (error) {
       console.log(error)
-      let alerta = new swal('No se encontro el clima');
-      return alerta
+      // let alerta = new swal('No se encontro el clima');
+      // return alerta
   }
 };
 
