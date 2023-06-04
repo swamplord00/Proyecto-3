@@ -174,8 +174,7 @@ div.cards{
 .credits{
     border: solid 2px #0275d8;
     border-radius: 10px;
-    height: 500px;
-    width: 1300px;
+    width: 90vw;
     margin-top: 100px;
     margin-left: 70px;
     margin-bottom: 100px;
