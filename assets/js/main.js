@@ -61,18 +61,38 @@ const drawcanvas = (hourly) => {
   if (checkH.checked) {
     canvaH = document.getElementById('graficoH');
     createGHumidity(canvaH, hourly);
+  }else{
+    
+      canvaH = document.getElementById('graficoH');
+      if (canvaH) canvaH.remove()
+     
   }
   if (checkP.checked) {
     canvaP = document.getElementById('graficoP');
     createGraphPrec(canvaP, hourly);
+  }else{
+    
+      canvaP = document.getElementById('graficoP');
+      if(canvaP)canvaP.remove()
+     
   }
   if (checkT.checked) {
     canvaT = document.getElementById('graficoT');
     createGtemp(canvaT, hourly);
+  }else{
+    
+      canvaT = document.getElementById('graficoT');
+      if(canvaT)canvaT.remove()
+     
   }
   if (checkW.checked) {
     canvaV = document.getElementById('graficoV');
     createGwind(canvaV, hourly);
+  }else{
+    
+      canvaV = document.getElementById('graficoV');
+      if(canvaV)canvaV.remove()
+    
   }
   if (
     (checkP.checked === false) &
