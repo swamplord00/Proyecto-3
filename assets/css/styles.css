@@ -32,12 +32,21 @@ h2{
     background-color: white;
     box-shadow: .5px .5px 5px grey;
     transition: all .3px;
-    padding-right: 30px; 
+    padding: 20px; 
+    flex-wrap: wrap;
 }
+
+div.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .info{
     height: 20px;
     width: 450px;
     padding-right: 10px;
+    margin-bottom: 15px;
 }
 
 .pTempM{
@@ -49,6 +58,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pTempm{
@@ -60,6 +70,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pPrec{
@@ -71,6 +82,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pWind{
@@ -82,6 +94,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pSun{
@@ -93,6 +106,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pSet{
@@ -104,6 +118,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 
@@ -159,8 +174,7 @@ h2{
 .credits{
     border: solid 2px #0275d8;
     border-radius: 10px;
-    height: 500px;
-    width: 1300px;
+    width: 90vw;
     margin-top: 100px;
     margin-left: 70px;
     margin-bottom: 100px;
@@ -207,5 +221,12 @@ h2{
 }
 
 .pFour{
+    text-align: center;
+}
+footer{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+footer p{
     text-align: center;
 }
