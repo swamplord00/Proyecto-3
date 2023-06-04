@@ -15,14 +15,13 @@ const contenedor = document.getElementById('contenedorGrafico');
 
 const handlerRequest = async () => {
   spinner.classList.remove('hidden');
+ 
 
   const respuesta = await makeRequest(input);
 
   const { daily, hourly } = respuesta;
-  //   console.log(daily);
-  console.log(hourly);
 
-  // const temperaturaMaxima = daily.temperature_2m_max.replace('T', '');
+
   drawcanvas(hourly);
 
   const summaryDiv = document.getElementById('resultados');
@@ -47,6 +46,10 @@ const handlerRequest = async () => {
     </div>
   `;
 
+  checkH.checked=false
+  checkP.checked=false
+  checkT.checked=false
+  checkW.checked=false
   spinner.classList.add('hidden');
 };
 
@@ -54,30 +57,21 @@ button.addEventListener('click', handlerRequest);
 
 const drawcanvas = (hourly) => {
   let canvaH, canvaP, canvaV, canvaT;
-  console.log(canvaH, canvaP, canvaT, canvaV);
 
   if (checkH.checked) {
     canvaH = document.getElementById('graficoH');
-    console.log(contenedor);
-    console.log(canvaH);
     createGHumidity(canvaH, hourly);
   }
   if (checkP.checked) {
     canvaP = document.getElementById('graficoP');
-    console.log(contenedor);
-    console.log(canvaP);
     createGraphPrec(canvaP, hourly);
   }
   if (checkT.checked) {
     canvaT = document.getElementById('graficoT');
-    console.log(contenedor);
-    console.log(canvaT);
     createGtemp(canvaT, hourly);
   }
   if (checkW.checked) {
     canvaV = document.getElementById('graficoV');
-    console.log(contenedor);
-    console.log(canvaV);
     createGwind(canvaV, hourly);
   }
   if (
@@ -89,13 +83,11 @@ const drawcanvas = (hourly) => {
     let alerta = new swal('Ningun grafico fue selecionado');
     return alerta;
   }
-  console.log(contenedor);
-  console.log(canvaH, canvaP, canvaT, canvaV);
+
 };
 
 checkH.addEventListener('change', function (e) {
   if (checkH.checked) {
-    console.log(contenedor);
     contenedor.innerHTML += "<canvas id='graficoH'></canvas>";
   } else {
     document.getElementById('graficoH').remove();
