@@ -19,13 +19,12 @@ h2{
 .resumen{
     display: flex;
     margin-bottom: 20px;
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
     transition: all .3px;
-    padding-right: 30px;
-    
+    padding-right: 30px; 
 }
 .info{
     height: 20px;
@@ -34,7 +33,7 @@ h2{
 }
 
 .pTempM{
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -45,7 +44,7 @@ h2{
 }
 
 .pTempm{
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -56,7 +55,7 @@ h2{
 }
 
 .pPrec{
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -67,7 +66,7 @@ h2{
 }
 
 .pWind{
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -78,7 +77,7 @@ h2{
 }
 
 .pSun{
-    border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -89,7 +88,7 @@ h2{
 }
 
 .pSet{
-        border: solid 1px white;
+    border: solid 2px #0275d8;
     border-radius: 10px;
     background-color: white;
     box-shadow: .5px .5px 5px grey;
@@ -101,38 +100,86 @@ h2{
 
 
 .pTempM:hover{
+    border: solid 1px white;
     transform: scale(1.1);
     cursor: pointer;
+    color: white;
     background-color: #DA4040;
 }
 
 .pTempm:hover{
+    border: solid 1px white;
     transform: scale(1.1);
+    color: white;
     cursor: pointer;
     background-color: #21CCD1;
 } 
 
 
 .pWind:hover{
+    border: solid 1px white;
     transform: scale(1.1);
+    color: white;
     cursor: pointer;
     background-color: #85A5A2;
 } 
 
 .pPrec:hover{
+    border: solid 1px white;
+    color: white;
     background-color: lightblue;
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .pSun:hover{
+    border: solid 1px white;
     background-color: #FAD6A5;
+    color: white;
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .pSet:hover{
+    border: solid 1px white;
     background-color: #E67451;
+    color: white;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.credits{
+    display: grid;
+    border: solid 2px #0275d8;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: .5px .5px 5px grey;
+    transition: all .3px;
+    padding-right:100px;     
+    height: 400px;
+    width: 1200px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.proyect{
+    text-align: center;
+}
+
+.proyectOne{
+    text-align: center;
+}
+
+.proyectTwo{
+    text-align: center;  
+    margin-left: 100px;
+}
+
+li{
+    text-align: center;
+    list-style: none;
+}
+
+li:hover{
+    color: #0275d8;
 }

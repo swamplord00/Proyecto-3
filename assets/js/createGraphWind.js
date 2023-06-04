@@ -35,7 +35,7 @@ export const createGwind = (canvas, data) => {
             label: 'Velocidad del viento',
             data: data.windspeed_10m,
             fill: false,
-            borderColor: 'lightblue',
+            borderColor: '#85A5A2',
             tension: 0.1,
           },
         ],

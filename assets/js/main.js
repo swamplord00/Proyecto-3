@@ -42,8 +42,8 @@ const handlerRequest = async () => {
   const summaryDiv = document.getElementById('resultados');
   summaryDiv.innerHTML = `
     <div class="resumen">
-    <h2 class="info">Resumen del clima actual</h2>
-    <p class="pTempM">Temp. maxima: ${daily.temperature_2m_max} °C</p>
+    <h2class="info">Resumen del clima actual</h2class=>
+    <p href="#"  class="pTempM">Temp. maxima: ${daily.temperature_2m_max} °C</p>
     <p class="pTempm">Temp. minima: ${daily.temperature_2m_min} °C</p>
     <p class="pPrec">Precipitacion: ${daily.precipitation_sum} mm</p>
     <p class="pWind">Velocidad del viento: ${daily.windspeed_10m_max} Km/h</p>
