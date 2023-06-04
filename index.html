@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"/>
-    <!-- css -->
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Pronóstico Climático</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-
-          <a class="navbar-brand" href="/index.html"><img src="./assets/images/logo.png" alt="">Team five weather app</a>
+          <a class="navbar-brand" href="/index.html"
+            ><img src="./assets/images/logo.png" alt="" />Team five weather
+            app</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -53,17 +55,14 @@
         <div class="presentacion">
           <h1>Pronóstico climático</h1>
           <p>
-
-            INSTRUCCIONES: Escribe el nombre de una ciudad y selecciona uno o mas
-            gráficos, luego presiona el botón consultar.
-
+            INSTRUCCIONES: Escribe el nombre de una ciudad y selecciona uno o
+            mas gráficos, luego presiona el botón consultar. Si quiere consultar graficos climaticos de otra ciudad, vuelve a seleccionar los clima.
           </p>
         </div>
       </section>
-      <!-- Buscar -->
+
       <section
-        class="border border-primary rounded border-2 shadow p-3 mb-5 bg-body-tertiary"
-      >
+        class="border border-primary rounded border-2 shadow p-3 mb-5 bg-body-tertiary">
         <div class="input-group flex-nowrap">
           <label for="indicador" class="form-control">Ciudad :</label>
           <input
@@ -75,7 +74,7 @@
             aria-describedby="addon-wrapping"
           />
         </div>
-        <!-- Opciones -->
+
         <div class="container-fluid pt-3">
           <p>Graficos climatico</p>
           <p>Gráficos:</p>
@@ -151,10 +150,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Axios-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="./assets/js/main.js" type="module"></script>
