@@ -21,19 +21,13 @@ export const makeRequest = async (input) => {
 
 export const makeLatLonRequest = async (input) => {
   
-  console.log(input.value);
   const endpoint = `https://geocoding-api.open-meteo.com/v1/search?name=${input.value}&count=10&language=es&format=json`;
   const output = await axios.get(endpoint);
-  console.log(output.data.results);
 
   try {
-    
-    if (output.status === 200) {
-      
+    if (output.status === 200) {     
         const datos = output.data.results[0];
         return datos;
-      
-      
     } else {
       console.log("Error status");
     }
@@ -42,7 +36,6 @@ export const makeLatLonRequest = async (input) => {
       icon: 'error',
       title: 'Ciudad incorecta',
       text: 'Nombre de ciudad no existe!',
-      
     })
    
   }

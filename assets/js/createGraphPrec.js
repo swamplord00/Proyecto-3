@@ -45,9 +45,8 @@ export const createGraphPrec = (canvas, data) => {
     
 
   } catch (error) {
-      console.log(error)
-      // let alerta = new swal('No se encontro el clima');
-      // return alerta
+      let alerta = new swal('No se encontro el clima');
+      return alerta
   }
 };
 

@@ -5,6 +5,14 @@ div.hidden {
 label {
     color: darkblue;
 }
+
+img{
+    height: 20px;
+    width: 80px;
+    margin-top: -5px;
+    padding-right: 10px;
+}
+
 div.presentacion {
     width: 70vw;
     text-align: center;
@@ -24,12 +32,21 @@ h2{
     background-color: white;
     box-shadow: .5px .5px 5px grey;
     transition: all .3px;
-    padding-right: 30px; 
+    padding: 20px; 
+    flex-wrap: wrap;
 }
+
+div.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .info{
     height: 20px;
     width: 450px;
     padding-right: 10px;
+    margin-bottom: 15px;
 }
 
 .pTempM{
@@ -41,6 +58,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pTempm{
@@ -52,6 +70,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pPrec{
@@ -63,6 +82,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pWind{
@@ -74,6 +94,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pSun{
@@ -85,6 +106,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 .pSet{
@@ -96,6 +118,7 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 
@@ -149,17 +172,14 @@ h2{
 }
 
 .credits{
-    display: grid;
     border: solid 2px #0275d8;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: .5px .5px 5px grey;
-    transition: all .3px;
-    padding-right:100px;     
-    height: 400px;
-    width: 1200px;
+    width: 90vw;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: 70px;
+    margin-bottom: 100px;
+    background-color: rgb(180, 187, 194);
+    padding: 10px 80px;
 }
 
 .proyect{
@@ -172,14 +192,41 @@ h2{
 
 .proyectTwo{
     text-align: center;  
-    margin-left: 100px;
 }
 
-li{
+.team{
     text-align: center;
     list-style: none;
 }
 
-li:hover{
-    color: #0275d8;
+.teamGit{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.teamGit:hover{
+    color: blue;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.pTwo{
+    text-align: center;
+    padding-left: 10;
+}
+
+.pThree{
+    text-align: center;
+}
+
+.pFour{
+    text-align: center;
+}
+footer{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+footer p{
+    text-align: center;
 }
