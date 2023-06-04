@@ -6,6 +6,13 @@ label {
     color: darkblue;
 }
 
+img{
+    height: 20px;
+    width: 80px;
+    margin-top: -5px;
+    padding-right: 10px;
+}
+
 div.presentacion {
     width: 70vw;
     text-align: center;
@@ -165,17 +172,15 @@ div.cards{
 }
 
 .credits{
-    display: grid;
     border: solid 2px #0275d8;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: .5px .5px 5px grey;
-    transition: all .3px;
-    padding-right:100px;     
-    height: 400px;
-    width: 1200px;
+    height: 500px;
+    width: 1300px;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: 70px;
+    margin-bottom: 100px;
+    background-color: rgb(180, 187, 194);
+    padding: 10px 80px;
 }
 
 .proyect{
@@ -188,16 +193,36 @@ div.cards{
 
 .proyectTwo{
     text-align: center;  
-    margin-left: 100px;
 }
 
-li{
+.team{
     text-align: center;
     list-style: none;
 }
 
-li:hover{
-    color: #0275d8;
+.teamGit{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.teamGit:hover{
+    color: blue;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.pTwo{
+    text-align: center;
+    padding-left: 10;
+}
+
+.pThree{
+    text-align: center;
+}
+
+.pFour{
+    text-align: center;
 }
 footer{
     background-color: lightgray;
