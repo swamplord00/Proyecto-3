@@ -1,7 +1,6 @@
 import { makeRequest } from './request.js';
 import { createGraphPrec } from './createGraphPrec.js';
 import { createGHumidity } from './createGHumidity.js';
-import { ClearG } from './ClearG.js';
 import { createGwind } from './createGraphWind.js';
 import { createGtemp } from './createGraphTemp.js';
 
@@ -36,7 +35,7 @@ const handlerRequest = async () => {
   const summaryDiv = document.getElementById('resultados');
   summaryDiv.innerHTML = `
     <div class="resumen">
-    <h2class="info">Resumen del clima actual</h2class=>
+    <h2 class="info">Resumen del clima actual</h2>
     <p href="#"  class="pTempM">Temp. maxima: ${daily.temperature_2m_max} °C</p>
     <p class="pTempm">Temp. minima: ${daily.temperature_2m_min} °C</p>
     <p class="pPrec">Precipitacion: ${daily.precipitation_sum} mm</p>
