@@ -16,7 +16,7 @@ export const createGraphPrec = (canvas, data) => {
             label: 'Precipitación',
             data: data.precipitation,
             fill: false,
-            borderColor: 'lightblue',
+            borderColor: 'green',
             tension: 0.1,
           },
         ],

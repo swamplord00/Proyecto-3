@@ -16,7 +16,7 @@ export const createGtemp = (canvas, data) => {
             label: 'Temperatura',
             data: data.temperature_2m,
             fill: false,
-            borderColor: 'lightblue',
+            borderColor: '#DA4040',
             tension: 0.1,
           },
         ],
